@@ -1,0 +1,44 @@
+# DB 설정
+
+# 기존 application.properties
+# spring.datasource.url = jdbc:mysql://localhost:3306/ictedu_db
+# spring.datasource.username = ictedu
+# spring.datasource.password =  1111
+# spring.datasource.driver-class-name= com.mysql.cj.jdbc.Driver
+
+# 생략 가능
+# server.port = 8080
+
+# mybatis.mapper-locations=mapper/*.xml
+# mybatis.type-aliases-package=com.ict.edu2
+
+# yml 파일로 db 설정하기
+
+spring: 
+    application: 
+        name: practice
+
+    dataSource: 
+        url: jdbc:mysql://localhost:3306/ictedu_db
+        username: ictedu
+        password: 1111
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    
+server: 
+    port: 8080
+    sevlet:  
+        context-path: /
+
+mybatis: 
+    mapper-locations: mapper/*.xml
+    type-aliases-package: com.ict.edu3
+    
+# secret(비밀 키, 32바이트 길이)
+# 1000ms(1촌) * 60 * 60 = 1시간
+
+jwt: 
+    secret: "KvYbRzDmZkVcBpEwHwFrTnGiAoKdJuBq"
+    expiration: 3600000
+
+
+    

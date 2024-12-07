@@ -54,8 +54,10 @@ public class SecurityConfig {
         return source; // 위의 설정들을 반환한다.
     }
     
-    public SecurityConfig(JwtRequestFilter filter){
+    public SecurityConfig(JwtRequestFilter filter){ // 생성자
         log.info("시큐리티 컨피그 메소드 호출됨.");
+        this.filter = filter;
+
     }
 
 
